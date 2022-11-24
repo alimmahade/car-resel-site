@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./Context/AuthUserContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
@@ -14,6 +16,7 @@ const SignUp = () => {
     console.log(data);
     createUser(data.email, data.password)
       .then((result) => {
+        toast.success("Welcome: Register sucess");
         const user = result.user;
         console.log(user);
       })

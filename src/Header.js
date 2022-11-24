@@ -10,6 +10,9 @@ const Header = () => {
         <Link to="/home" className="btn btn-ghost normal-case text-xl">
           Home
         </Link>
+        <Link to="/catagory" className="btn btn-ghost normal-case text-xl">
+          Product Catagory
+        </Link>
 
         <Link to="/signup" className="btn btn-ghost normal-case text-xl">
           Register
