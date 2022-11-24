@@ -29,6 +29,7 @@ const AuthUserContext = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
   const login = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
