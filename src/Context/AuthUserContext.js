@@ -20,12 +20,16 @@ const AuthUserContext = ({ children }) => {
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  const userLogIn = (email, password) => {
-    setLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
-  };
+  // const userLogIn = (email, password) => {
+  //   // setLoading(true);
+  //   return signInWithEmailAndPassword(auth, email, password);
+  // };
+
   const signInWithGoogle = () => {
     return signInWithPopup(auth, googleProvider);
+  };
+  const login = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   const logOut = () => {
@@ -47,9 +51,9 @@ const AuthUserContext = ({ children }) => {
     user,
     loading,
     createUser,
-    userLogIn,
     logOut,
     signInWithGoogle,
+    login,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
