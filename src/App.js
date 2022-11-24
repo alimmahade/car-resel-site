@@ -5,6 +5,7 @@ import Home from "./Home";
 import Login from "./Login";
 import Main from "./Layout/Main";
 import SignUp from "./SignUp";
+import Blog from "./Blog";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,7 @@ function App() {
 
         { path: "/login", element: <Login></Login> },
         { path: "/signup", element: <SignUp></SignUp> },
+        { path: "/blog", element: <Blog></Blog> },
       ],
     },
   ]);
