@@ -19,6 +19,16 @@ function App() {
         { path: "/login", element: <Login></Login> },
         { path: "/signup", element: <SignUp></SignUp> },
         { path: "/blog", element: <Blog></Blog> },
+        {
+          path: "*",
+          element: (
+            <div>
+              <h1 className="text-5xl font-bold">
+                Unhandled Thrown Error! 404 Not Found ! This page is not found.
+              </h1>
+            </div>
+          ),
+        },
       ],
     },
   ]);
