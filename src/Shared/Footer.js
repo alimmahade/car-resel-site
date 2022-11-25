@@ -10,7 +10,9 @@ const Footer = () => {
       </div>
       <div>
         <span className="footer-title">Company</span>
-        <Link className="link link-hover">About us</Link>
+        <Link to="/about" className="link link-hover">
+          About us
+        </Link>
       </div>
       <div>
         <span className="footer-title">Legal</span>
