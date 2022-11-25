@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "./Context/AuthUserContext";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  const signOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
   return (
     <div>
       <div className="navbar bg-neutral text-neutral-content">
@@ -23,7 +28,11 @@ const Header = () => {
           Blog
         </Link>
         {user?.uid ? (
-          <Link to="/login" className="btn btn-ghost normal-case">
+          <Link
+            onClick={signOut}
+            to="/login"
+            className="btn btn-ghost normal-case"
+          >
             Sign Out
           </Link>
         ) : (
