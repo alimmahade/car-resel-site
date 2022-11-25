@@ -9,7 +9,6 @@ import Blog from "./Blog";
 import ProductsCatagory from "./ProductsCatagory";
 import About from "./About";
 import CategoryDetails from "./CategoryDetails";
-
 function App() {
   const router = createBrowserRouter([
     {
@@ -20,7 +19,10 @@ function App() {
         {
           path: "/home",
           element: <Home></Home>,
-          loader: () => fetch("http://localhost:5000/category"),
+          // loader: async () => {
+          //   const data = await fetch("http://localhost:5000/category");
+          //   return data;
+          // },
         },
 
         { path: "/login", element: <Login></Login> },
@@ -29,9 +31,14 @@ function App() {
         { path: "/about", element: <About></About> },
         { path: "/catagory", element: <ProductsCatagory></ProductsCatagory> },
         {
-          path: "/categorydetails",
+          path: "/categorydetails/:id",
           element: <CategoryDetails></CategoryDetails>,
-          loader: () => fetch("http://localhost:5000/categorydetails"),
+          loader: async ({ params }) => {
+            const data = await fetch(
+              `http://localhost:5000/categorydetails/${params.id}`
+            );
+            return data;
+          },
         },
         {
           path: "*",

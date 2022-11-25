@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import banimg from "./asset/img/car.ccc8ff0.png";
 import pic from "./asset/img/1.jpg";
 import jic from "./asset/img/2.jpg";
-import { Link, useLoaderData } from "react-router-dom";
+import jip from "./asset/img/4.png";
+import jik from "./asset/img/6.jfif";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const cateBtn = useLoaderData();
-  console.log(cateBtn);
+  const [cateBtn, setcateBtn] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/category")
+      .then((res) => res.json())
+      .then((data) => setcateBtn(data));
+  }, []);
+
+  // const cateBtn = useLoaderData();
+  // console.log(cateBtn);
 
   return (
     <div>
@@ -23,7 +32,7 @@ const Home = () => {
         <h1 className="text-3xl m-6">Car Catagories</h1>
         {cateBtn.map((btn) => (
           <div className="items-center justify-center">
-            <Link to="/categorydetails">
+            <Link to={`/categorydetails/${btn.name}`}>
               <button className="m-6 btn btn-outline btn-secondary">
                 {btn.name}
               </button>
@@ -42,11 +51,11 @@ const Home = () => {
         </figure>
         <div className="card-body"></div>
         <figure>
-          <img style={{ height: "200px" }} src={pic} alt="Movie" />
+          <img style={{ height: "200px" }} src={jip} alt="Movie" />
         </figure>
         <div className="card-body"></div>
         <figure>
-          <img style={{ height: "200px" }} src={pic} alt="Movie" />
+          <img style={{ height: "200px" }} src={jik} alt="Movie" />
         </figure>
         <div className="card-body"></div>
       </div>
