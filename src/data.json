@@ -1,67 +1,202 @@
 // toyota
-[
-    {
-      "picture": "https://assets.swap.com.bd/products/e1e32e235eee1f970470a3a6658dfdd5/Toyota-Aqua-G-2015.png",
+[{
+      "img": "https://assets.swap.com.bd/products/e1e32e235eee1f970470a3a6658dfdd5/Toyota-Aqua-G-2015.png",
       "location": "Jashore",
-      "name": "Toyota Aqua G 2015"
+      "name": "Toyota Aqua G 2015",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "4 years",
+      "postDate": "24 Nav 2021",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/2a79ea27c279e471f4d180b08d62b00a/1-Toyota-corolla-x-2001.png",
+      "img": "https://assets.swap.com.bd/products/2a79ea27c279e471f4d180b08d62b00a/1-Toyota-corolla-x-2001.png",
       "location": "Khulna",
-      "name": "Toyota Corolla X 2001"
+      "name": "Toyota Corolla X 2001",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "10 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/d6baf65e0b240ce177cf70da146c8dc8/Allion-2015.png",
+      "img": "https://assets.swap.com.bd/products/d6baf65e0b240ce177cf70da146c8dc8/Allion-2015.png",
       "location": "Dhaka",
-      "name": "Toyota Allion 2015"
+      "name": "Toyota Allion 2015",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "2 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/25b2822c2f5a3230abfadd476e8b04c9/2-Toyota-allion-2011.png",
+      "img": "https://assets.swap.com.bd/products/25b2822c2f5a3230abfadd476e8b04c9/2-Toyota-allion-2011.png",
       "location": "Barisal",
-      "name": "Toyota Allion 2011"
+      "name": "Toyota Allion 2011",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "6 years",
+      "postDate": "24 Nav 2021",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/428fca9bc1921c25c5121f9da7815cde/Toyota-Premio-X-2007.png",
+      "img": "https://assets.swap.com.bd/products/428fca9bc1921c25c5121f9da7815cde/Toyota-Premio-X-2007.png",
       "location": "Sylet",
-      "name": "Toyota F Premio 2007"
+      "name": "Toyota F Premio 2007",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "7 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/fb89705ae6d743bf1e848c206e16a1d7/Toyota-Harrier-Ellegance--2015.png",
+      "img": "https://assets.swap.com.bd/products/fb89705ae6d743bf1e848c206e16a1d7/Toyota-Harrier-Ellegance--2015.png",
       "location": "Vola",
-      "name": "Toyota Harrier Elegance 2015"
-    }
-  ]
+      "name": "Toyota Harrier Elegance 2015",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "2 years",
+      "postDate": "24 Nav 2021",
+      "userStatus": "verified"
+    }]
 
 // honda
 [
     {
-      "picture": "https://assets.swap.com.bd/products/f7664060cc52bc6f3d620bcedc94a4b6/Honda%20Vezel%20S%202013.png",
+      "img": "https://assets.swap.com.bd/products/f7664060cc52bc6f3d620bcedc94a4b6/Honda%20Vezel%20S%202013.png",
       "location": "Chuadanga",
-      "name": "Honda Vezel S 2013"
+      "name": "Honda Vezel S 2013",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "5 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/39059724f73a9969845dfe4146c5660e/Honda%20CR-V%20X%202008.png",
+      "img": "https://assets.swap.com.bd/products/39059724f73a9969845dfe4146c5660e/Honda%20CR-V%20X%202008.png",
       "location": "Satkhira",
-      "name": "Honda CR-V X 2008"
+      "name": "Honda CR-V X 2008",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "8 years",
+      "postDate": "24 Nav 2019",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/d840cc5d906c3e9c84374c8919d2074e/Honda%20Grace%20LX%202015.png",
+      "img": "https://assets.swap.com.bd/products/d840cc5d906c3e9c84374c8919d2074e/Honda%20Grace%20LX%202015.png",
       "location": "Gazipur",
-      "name": "Honda Grace LX 2015"
+      "name": "Honda Grace LX 2015",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "5 years",
+      "postDate": "24 Nav 2021",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/06997f04a7db92466a2baa6ebc8b872d/Honda-Grace-EX-2015.png",
+      "img": "https://assets.swap.com.bd/products/06997f04a7db92466a2baa6ebc8b872d/Honda-Grace-EX-2015.png",
       "location": "Borisal",
-      "name": "Honda Grace EX 2015"
+      "name": "Honda Grace EX 2015",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "4 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/36660e59856b4de58a219bcf4e27eba3/Honda%20Vezel%202013.png",
+      "img": "https://assets.swap.com.bd/products/36660e59856b4de58a219bcf4e27eba3/Honda%20Vezel%202013.png",
       "location": "Ctg",
-      "name": "Honda Vezel 2013"
+      "name": "Honda Vezel 2013",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "3 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
     },
     {
-      "picture": "https://assets.swap.com.bd/products/8c6744c9d42ec2cb9e8885b54ff744d0/Honda-Vezel-Z-2016.png",
+      "img": "https://assets.swap.com.bd/products/8c6744c9d42ec2cb9e8885b54ff744d0/Honda-Vezel-Z-2016.png",
       "location": "Magura",
-      "name": "Honda Vezel Z 2016"
+      "name": "Honda Vezel Z 2016",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "2 years",
+      "postDate": "24 Nav 2024",
+      "userStatus": "verified"
     }
   ]
+  // Nissan
+[{
+      "img": "https://assets.swap.com.bd/products/f7664060cc52bc6f3d620bcedc94a4b6/Honda%20Vezel%20S%202013.png",
+      "location": "Chuadanga",
+      "name": "Nissan Vezel S 2013",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "5 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
+    },
+    {
+      "img": "https://assets.swap.com.bd/products/39059724f73a9969845dfe4146c5660e/Honda%20CR-V%20X%202008.png",
+      "location": "Satkhira",
+      "name": "Nissan CR-V X 2008",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "8 years",
+      "postDate": "24 Nav 2019",
+      "userStatus": "verified"
+    },
+    {
+      "img": "https://assets.swap.com.bd/products/d840cc5d906c3e9c84374c8919d2074e/Honda%20Grace%20LX%202015.png",
+      "location": "Gazipur",
+      "name": "Nissan Grace LX 2015",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "5 years",
+      "postDate": "24 Nav 2021",
+      "userStatus": "verified"
+    },
+    {
+      "img": "https://assets.swap.com.bd/products/06997f04a7db92466a2baa6ebc8b872d/Honda-Grace-EX-2015.png",
+      "location": "Borisal",
+      "name": "Nissan Grace EX 2015",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "4 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
+    },
+    {
+      "img": "https://assets.swap.com.bd/products/36660e59856b4de58a219bcf4e27eba3/Honda%20Vezel%202013.png",
+      "location": "Ctg",
+      "name": "Nissan Vezel 2013",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "3 years",
+      "postDate": "24 Nav 2020",
+      "userStatus": "verified"
+    },
+    {
+      "img": "https://assets.swap.com.bd/products/8c6744c9d42ec2cb9e8885b54ff744d0/Honda-Vezel-Z-2016.png",
+      "location": "Magura",
+      "name": "Nissan Vezel Z 2016",
+      "price": "150000",
+      "orginalPrice": "215990 ",
+      "usedYears": "2 years",
+      "postDate": "24 Nav 2024",
+      "userStatus": "verified"
+    }
+      ]
+
+      [
+        {
+          "img": "https://assets.swap.com.bd/brand/f033ab37c30201f73f142449d037028d/logo/honda_car_v1.png",
+          "name": "Honda"
+        },
+        {
+          "img": "https://assets.swap.com.bd/brand/182be0c5cdcd5072bb1864cdee4d3d6e/logo/Toyota.png",
+          "name": "Toyota"
+        },
+        {
+          "img": "https://assets.swap.com.bd/brand/d645920e395fedad7bbbed0eca3fe2e0/logo/Nissan-logo.png",
+          "name": "Nissan"
+        }
+      ]

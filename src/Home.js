@@ -2,8 +2,12 @@ import React from "react";
 import banimg from "./asset/img/car.ccc8ff0.png";
 import pic from "./asset/img/1.jpg";
 import jic from "./asset/img/2.jpg";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const cateBtn = useLoaderData();
+  console.log(cateBtn);
+
   return (
     <div>
       <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -17,22 +21,32 @@ const Home = () => {
       </div>
       <div>
         <h1 className="text-3xl m-6">Car Catagories</h1>
-        <button className="m-6 btn btn-outline">Honda</button>
-        <button className="m-6 btn btn-outline btn-primary">Toyota</button>
-        <button className="m-6 btn btn-outline btn-secondary">Nissan</button>
+        {cateBtn.map((btn) => (
+          <div className="items-center justify-center">
+            <Link to="/categorydetails">
+              <button className="m-6 btn btn-outline btn-secondary">
+                {btn.name}
+              </button>
+            </Link>
+          </div>
+        ))}
       </div>
-      <h1 className="text-3xl">Most Popular Car</h1>
+      <h1 className="text-3xl m-6">Most Popular Car</h1>
       <div className="card card-side bg-base-100 shadow-xl">
         <figure>
-          <img src={pic} alt="Movie" />
+          <img style={{ height: "200px" }} src={pic} alt="Movie" />
         </figure>
         <div className="card-body"></div>
         <figure>
-          <img src={jic} alt="Movie" />
+          <img style={{ height: "200px" }} src={jic} alt="Movie" />
         </figure>
         <div className="card-body"></div>
         <figure>
-          <img src={pic} alt="Movie" />
+          <img style={{ height: "200px" }} src={pic} alt="Movie" />
+        </figure>
+        <div className="card-body"></div>
+        <figure>
+          <img style={{ height: "200px" }} src={pic} alt="Movie" />
         </figure>
         <div className="card-body"></div>
       </div>

@@ -8,6 +8,7 @@ import SignUp from "./SignUp";
 import Blog from "./Blog";
 import ProductsCatagory from "./ProductsCatagory";
 import About from "./About";
+import CategoryDetails from "./CategoryDetails";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,13 +17,22 @@ function App() {
       element: <Main></Main>,
       children: [
         { path: "/", element: <Home></Home> },
-        { path: "/home", element: <Home></Home> },
+        {
+          path: "/home",
+          element: <Home></Home>,
+          loader: () => fetch("http://localhost:5000/category"),
+        },
 
         { path: "/login", element: <Login></Login> },
         { path: "/signup", element: <SignUp></SignUp> },
         { path: "/blog", element: <Blog></Blog> },
         { path: "/about", element: <About></About> },
         { path: "/catagory", element: <ProductsCatagory></ProductsCatagory> },
+        {
+          path: "/categorydetails",
+          element: <CategoryDetails></CategoryDetails>,
+          loader: () => fetch("http://localhost:5000/categorydetails"),
+        },
         {
           path: "*",
           element: (
