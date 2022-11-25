@@ -11,7 +11,7 @@ const Login = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const { login } = useContext(AuthContext);
+  const { login, signInWithGoogle } = useContext(AuthContext);
   console.log(login);
   const navigate = useNavigate();
   const handleLogin = (data) => {
@@ -23,6 +23,16 @@ const Login = () => {
       })
       .catch((err) => console.log(err));
   };
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        // const cretential=GoogleAuthProvider.credentialFromResult(result);
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div>
       <h1 className="text-3xl">Please Login</h1>
@@ -63,7 +73,9 @@ const Login = () => {
             New to our website ? <Link to="/signup">Create a Account</Link>
           </p>
           <div className="divider">OR</div>
-          <button className="btn btn-outline">Continue With Google</button>
+          <button onClick={handleGoogleSignIn} className="btn btn-outline">
+            Continue With Google
+          </button>
         </form>
       </div>
     </div>

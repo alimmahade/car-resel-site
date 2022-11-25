@@ -1,0 +1,33 @@
+
+[
+    {
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Ox6r4iUsIgNM9S_RLHRsJ6Efk6nyule0RA&usqp=CAU",
+      "details": "Learn Basic To Advanced HTML in 3 Month. This course will cover everything you need to become a professional web developer from scratch, without any prior experience.",
+      "name": "HTML"
+    },
+    {
+      "picture": "https://cdn-icons-png.flaticon.com/512/919/919826.png",
+      "details": "Learn Basic To Advanced CSS in 3 Month. This course will cover everything you need to become a professional web developer from scratch, without any prior experience.",
+      "name": "CSS"
+    },
+    {
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png",
+      "details": "Learn Basic To Advanced Bootstarp in 3 Month. This course will cover everything you need to become a professional web developer from scratch, without any prior experience.",
+      "name": "Bootstrap"
+    },
+    {
+      "picture": "https://www.computerhope.com/jargon/j/javascript.png",
+      "details": "Learn Basic To Advanced JavaScript in 6 Month. This course will cover everything you need to become a professional web developer from scratch, without any prior experience.",
+      "name": "Java Script"
+    },
+    {
+      "picture": "https://res.cloudinary.com/practicaldev/image/fetch/s--ljmYNm3i--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/Ekran-Resmi-2019-11-18-18.08.13.png",
+      "details": "Learn Basic To Advanced React in 6 Month. This course will cover everything you need to become a professional web developer from scratch, without any prior experience.",
+      "name": "React"
+    },
+    {
+      "picture": "https://res.cloudinary.com/practicaldev/image/fetch/s--KkScstnJ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zojuy79lo3fn3qdt7g6p.png",
+      "details": "Learn Basic To Advanced Express JS in 3 Month. This course will cover everything you need to become a professional web developer from scratch, without any prior experience.",
+      "name": "Express JS"
+    }
+  ]

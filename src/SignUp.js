@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, signInWithGoogle } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -21,6 +21,15 @@ const SignUp = () => {
         console.log(user);
       })
       .catch((err) => console.log(err));
+  };
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        // const cretential=GoogleAuthProvider.credentialFromResult(result);
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
   };
   return (
     <div>
@@ -74,7 +83,9 @@ const SignUp = () => {
             Already Have an account ? <Link to="/login"> Please Log in</Link>
           </p>
           <div className="divider">OR</div>
-          <button className="btn btn-outline">Continue With Google</button>
+          <button onClick={handleGoogleSignIn} className="btn btn-outline">
+            Continue With Google
+          </button>
         </form>
       </div>
     </div>

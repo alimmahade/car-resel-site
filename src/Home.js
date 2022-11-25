@@ -1,62 +1,35 @@
 import React from "react";
+import banimg from "./asset/img/car.ccc8ff0.png";
 
 const Home = () => {
   return (
-    <div className="carousel w-full">
-      <div id="slide1" className="carousel-item relative w-full">
-        <img
-          src="https://thumbs.dreamstime.com/b/private-car-toyota-prius-hybrid-system-chiang-mai-thailand-march-road-no-km-chiangmai-business-area-113907270.jpg"
-          alt=" "
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide2" className="btn btn-circle">
-            ❯
-          </a>
+    <div>
+      <div className="card lg:card-side bg-base-100 shadow-xl">
+        <h2 className="card-title text-4xl">SELL YOUR CAR FOR QUICK CASH</h2>
+        <div className="card-body">
+          <img src={banimg} alt="np" />
         </div>
       </div>
-      <div id="slide2" className="carousel-item relative w-full">
-        <img
-          src="https://placeimg.com/800/200/arch"
-          alt=" "
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide3" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
+      <div>
+        <h1 className="text-3xl m-6">Car Catagories</h1>
+        <button className="m-6 btn btn-outline">Microbus</button>
+        <button className="m-6 btn btn-outline btn-primary">Elite Car</button>
+        <button className="m-6 btn btn-outline btn-secondary">Fuel Car</button>
       </div>
-      <div id="slide3" className="carousel-item relative w-full">
-        <img
-          src="https://placeimg.com/800/200/arch"
-          alt=" "
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide4" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide4" className="carousel-item relative w-full">
-        <img src="https://placeimg.com/800/200/arch" className="w-full" />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide1" className="btn btn-circle">
-            ❯
-          </a>
+      <div className="card w-96 bg-base-100 shadow-xl">
+        <figure className="px-10 pt-10">
+          <img
+            src="https://placeimg.com/400/225/arch"
+            alt="Shoes"
+            className="rounded-xl"
+          />
+        </figure>
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">Shoes!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div className="card-actions">
+            <button className="btn btn-primary">Buy Now</button>
+          </div>
         </div>
       </div>
     </div>

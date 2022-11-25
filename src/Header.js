@@ -7,25 +7,27 @@ const Header = () => {
   return (
     <div>
       <div className="navbar bg-neutral text-neutral-content">
-        <Link to="/home" className="btn btn-ghost normal-case text-xl">
+        <h2 className="text-2xl font-bold text-red-500">CarBari</h2>
+        <Link to="/home" className="btn btn-ghost normal-case">
           Home
         </Link>
-        <Link to="/catagory" className="btn btn-ghost normal-case text-xl">
-          Product Catagory
+
+        <Link to="/catagory" className="btn btn-ghost normal-case">
+          Items
         </Link>
 
-        <Link to="/signup" className="btn btn-ghost normal-case text-xl">
+        <Link to="/signup" className="btn btn-ghost normal-case">
           Register
         </Link>
-        <Link to="/blog" className="btn btn-ghost normal-case text-xl">
+        <Link to="/blog" className="btn btn-ghost normal-case">
           Blog
         </Link>
         {user?.uid ? (
-          <Link to="/login" className="btn btn-ghost normal-case text-xl">
+          <Link to="/login" className="btn btn-ghost normal-case">
             Sign Out
           </Link>
         ) : (
-          <Link to="/login" className="btn btn-ghost normal-case text-xl">
+          <Link to="/login" className="btn btn-ghost normal-case">
             Log in
           </Link>
         )}
