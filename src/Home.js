@@ -19,8 +19,8 @@ const Home = () => {
 
   return (
     <div>
-      <div className="card lg:card-side bg-base-100 shadow-xl">
-        <h2 className="card-title text-4xl">
+      <div className="card lg:card-side bg-base-100 shadow-xl p-10">
+        <h2 className="card-title text-6xl">
           SELL YOUR CAR FOR
           <br /> QUICK CASH
         </h2>
@@ -31,12 +31,14 @@ const Home = () => {
       <div>
         <h1 className="text-3xl m-6">Car Catagories</h1>
         {cateBtn.map((btn) => (
-          <div className="items-center justify-center">
-            <Link to={`/categorydetails/${btn.name}`}>
-              <button className="m-6 btn btn-outline btn-secondary">
-                {btn.name}
-              </button>
-            </Link>
+          <div className="inline-flex">
+            <div>
+              <Link to={`/categorydetails/${btn.name}`}>
+                <button className="m-6 btn btn-outline btn-secondary">
+                  {btn.name}
+                </button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
@@ -60,8 +62,8 @@ const Home = () => {
         <div className="card-body"></div>
       </div>
 
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero bg-base-200">
+        <div className="w-full hero-content flex-col lg:flex-row-reverse">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
               <h1 className="text-3xl">Give Your Feedback</h1>
@@ -96,7 +98,7 @@ const Home = () => {
                 />
               </div>
               <textarea
-                className="textarea"
+                className="textarea input-bordered"
                 placeholder="Type Your feedback"
               ></textarea>
               <div className="form-control mt-6">
