@@ -4,13 +4,15 @@ import { AuthContext } from "./Context/AuthUserContext";
 
 const CategoryDetails = () => {
   const { user } = useContext(AuthContext);
-  console.log(user?.uid);
+  const { email, displayName, uid } = user;
+  console.log(displayName);
   const data = useLoaderData();
+
   return (
-    <div>
+    <div className="lg:grid grid-cols-2 md:grid-cols-3">
       {data.map((catagory) => (
         <div key={catagory._id} catagory={catagory}>
-          <div className="card md:flex card-compact w-96 bg-base-100 shadow-xl text-center">
+          <div className="card card-compact shadow-xl text-center">
             <div className="card-body align-middle md:shrink-0">
               <figure>
                 <img
@@ -31,7 +33,60 @@ const CategoryDetails = () => {
               <p>Used Only: {catagory.usedYears}</p>
               <p>Seler Name: {catagory.location}</p>
               <p>Add Post on: {catagory.postDate}</p>
-              <button className="btn btn-outline btn-secondary">Buy Now</button>
+              {/* The button to open modal */}
+              <label htmlFor="Booking-Modal" className="btn">
+                Book Now
+              </label>
+
+              {/* Put this part before </body> tag */}
+              <input
+                type="checkbox"
+                id="Booking-Modal"
+                className="modal-toggle"
+              />
+              <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                  <input
+                    type="text"
+                    className="input input-bordered w-full"
+                    readOnly
+                    defaultValue={catagory.name}
+                  />
+                  <input
+                    type="text"
+                    className="input input-bordered w-full"
+                    readOnly
+                    defaultValue={catagory.price}
+                  />
+                  <input
+                    type="text"
+                    className="input input-bordered w-full"
+                    readOnly
+                    defaultValue={email}
+                  />
+                  <input
+                    type="text"
+                    className="input input-bordered w-full"
+                    readOnly
+                    defaultValue={displayName || uid}
+                  />
+                  <input
+                    type="text"
+                    className="input input-bordered w-full"
+                    placeholder="your phone number"
+                  />
+                  <input
+                    type="text"
+                    className="input input-bordered w-full"
+                    placeholder="Metting Location"
+                  />
+                  <div className="modal-action">
+                    <label htmlFor="Booking-Modal" className="btn">
+                      Submit
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
