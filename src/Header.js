@@ -11,7 +11,7 @@ const Header = () => {
   };
   return (
     <div>
-      <div className="navbar bg-neutral text-neutral-content">
+      <div className="navbar bg-neutral text-neutral-content ">
         <h2 className="text-2xl font-bold text-red-500">CarBari</h2>
         <Link to="/home" className="btn btn-ghost normal-case">
           Home

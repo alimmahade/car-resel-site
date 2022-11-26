@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "./Context/AuthUserContext";
 
 const CategoryDetails = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user?.uid);
   const data = useLoaderData();
-  console.log(data);
   return (
     <div>
       {data.map((catagory) => (
         <div key={catagory._id} catagory={catagory}>
-          <div className="card card-compact w-96 bg-base-100 shadow-xl text-center">
-            <div className="card-body align-middle">
+          <div className="card md:flex card-compact w-96 bg-base-100 shadow-xl text-center">
+            <div className="card-body align-middle md:shrink-0">
               <figure>
                 <img
+                  className="h-48 w-full object-cover md:h-full md:w-48"
                   src={catagory.img}
                   style={{ height: "100px", width: "200px" }}
                   alt=""
@@ -28,10 +31,7 @@ const CategoryDetails = () => {
               <p>Used Only: {catagory.usedYears}</p>
               <p>Seler Name: {catagory.location}</p>
               <p>Add Post on: {catagory.postDate}</p>
-              <button className="btn btn-outline btn-secondary">
-                {" "}
-                Buy Now
-              </button>
+              <button className="btn btn-outline btn-secondary">Buy Now</button>
             </div>
           </div>
         </div>

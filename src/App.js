@@ -1,5 +1,6 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import notfound from "./asset/img/404-pic.png";
 
 import Home from "./Home";
 import Login from "./Login";
@@ -45,8 +46,9 @@ function App() {
           path: "*",
           element: (
             <div>
-              <h1 className="text-5xl font-bold">
+              <h1 className="text-2xl font-bold">
                 Unhandled Thrown Error! 404 Not Found ! This page is not found.
+                <img className="w-1/4" src={notfound} alt="" />
               </h1>
             </div>
           ),

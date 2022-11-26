@@ -33,7 +33,7 @@ const Home = () => {
         {cateBtn.map((btn) => (
           <div className="items-center justify-center">
             <Link to={`/categorydetails/${btn.name}`}>
-              <button className="m-6 btn btn-outline btn-secondary">
+              <button className="m-6 btn btn-outline btn-secondary btn-group">
                 {btn.name}
               </button>
             </Link>
