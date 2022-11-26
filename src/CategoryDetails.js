@@ -14,7 +14,7 @@ const CategoryDetails = () => {
             <div className="card-body align-middle md:shrink-0">
               <figure>
                 <img
-                  className="h-48 w-full object-cover md:h-full md:w-48"
+                  className="w-full object-cover md:h-full md:w-48 max-w-full h-auto"
                   src={catagory.img}
                   style={{ height: "100px", width: "200px" }}
                   alt=""
