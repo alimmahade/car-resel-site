@@ -29,6 +29,7 @@ const Login = () => {
         // const cretential=GoogleAuthProvider.credentialFromResult(result);
         const user = result.user;
         console.log(user);
+        navigate("/home");
       })
       .catch((error) => console.error(error));
   };
