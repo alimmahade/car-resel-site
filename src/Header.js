@@ -11,10 +11,10 @@ const Header = () => {
   };
   return (
     <div>
-      <div className="navbar">
-        <div className="navbar-start">
+      <div className="navbar shadow p-4">
+        <div className="navbar-start p-4">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className="btn btn-ghost p-4 lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -35,24 +35,23 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="/home" className="btn btn-ghost normal-case">
+                <Link to="/home" className="btn btn-ghost p-4">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/catagory" className="btn btn-ghost normal-case">
+                <Link to="/catagory" className="btn btn-ghost p-4">
                   Items
                 </Link>
               </li>
 
               <li>
-                <Link to="/signup" className="btn btn-ghost normal-case">
+                <Link to="/signup" className="btn btn-ghost p-4">
                   Register
                 </Link>
               </li>
               <li>
-                {" "}
-                <Link to="/blog" className="btn btn-ghost normal-case">
+                <Link to="/blog" className="btn btn-ghost p-4">
                   Blog
                 </Link>
               </li>
@@ -62,41 +61,43 @@ const Header = () => {
                   <Link
                     onClick={signOut}
                     to="/login"
-                    className="btn btn-ghost normal-case"
+                    className="btn btn-ghost p-4"
                   >
                     Sign Out
                   </Link>
                 ) : (
-                  <Link to="/login" className="btn btn-ghost normal-case">
+                  <Link to="/login" className="btn btn-ghost p-4">
                     Log in
                   </Link>
                 )}
               </li>
             </ul>
           </div>
-          <h2 className="text-2xl font-bold text-red-500">CarBari</h2>
+          <Link to="/home">
+            <h2 className="text-3xl font-bold text-red-500">CarBari</h2>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">
+          <ul className="menu menu-horizontal p-4">
             <li>
-              <Link to="/home" className="btn btn-ghost normal-case">
+              <Link to="/home" className="btn btn-ghost p-4">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/catagory" className="btn btn-ghost normal-case">
+              <Link to="/catagory" className="btn btn-ghost p-4">
                 Items
               </Link>
             </li>
 
             <li>
-              <Link to="/signup" className="btn btn-ghost normal-case">
+              <Link to="/signup" className="btn btn-ghost p-4">
                 Register
               </Link>
             </li>
             <li>
               {" "}
-              <Link to="/blog" className="btn btn-ghost normal-case">
+              <Link to="/blog" className="btn btn-ghost p-4">
                 Blog
               </Link>
             </li>
@@ -105,12 +106,12 @@ const Header = () => {
                 <Link
                   onClick={signOut}
                   to="/login"
-                  className="btn btn-ghost normal-case"
+                  className="btn btn-ghost p-4"
                 >
                   Sign Out
                 </Link>
               ) : (
-                <Link to="/login" className="btn btn-ghost normal-case">
+                <Link to="/login" className="btn btn-ghost p-4">
                   Log in
                 </Link>
               )}

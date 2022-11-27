@@ -66,10 +66,10 @@ const Home = () => {
         <div className="w-full hero-content flex-col lg:flex-row-reverse">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
-              <h1 className="text-3xl">Give Your Feedback</h1>
+              <h1 className="text-3xl"> Give Your Feedback </h1>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text text-2xl">Name</span>
                 </label>
                 <input
                   type="text"
@@ -79,7 +79,7 @@ const Home = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-2xl">Email</span>
                 </label>
                 <input
                   type="text"
@@ -89,7 +89,7 @@ const Home = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Phone Number</span>
+                  <span className="label-text text-2xl">Phone Number</span>
                 </label>
                 <input
                   type="text"

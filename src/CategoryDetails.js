@@ -74,12 +74,12 @@ const CategoryDetails = () => {
                   <input
                     type="text"
                     className="input input-bordered w-full"
-                    placeholder="your phone number"
+                    placeholder="give phone number"
                   />
                   <input
                     type="text"
                     className="input input-bordered w-full"
-                    placeholder="Metting Location"
+                    placeholder="Location"
                   />
                   <div className="modal-action">
                     <label htmlFor="Booking-Modal" className="btn">

@@ -32,13 +32,13 @@ const SignUp = () => {
       .catch((error) => console.error(error));
   };
   return (
-    <div>
-      <h1 className="text-2xl text-center">Please Sign Up</h1>
+    <div className="p-10">
+      <h1 className="text-4xl text-center">Please Sign Up</h1>
       <div className="flex justify-center items-center">
         <form onSubmit={handleSubmit(handleSignUp)}>
           <div className="form-control max-w-xs w-84 p-4">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text text-2xl">Name</span>
             </label>
             <input
               type="text"
@@ -49,7 +49,7 @@ const SignUp = () => {
           </div>
           <div className="form-control max-w-xs w-84 p-4">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text text-2xl">Email</span>
             </label>
             <input
               type="text"
@@ -63,7 +63,7 @@ const SignUp = () => {
           </div>
           <div className="form-control w-84 p-4 max-w-xs">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text text-2xl">Password</span>
             </label>
             <input
               type="password"
@@ -79,8 +79,11 @@ const SignUp = () => {
           {/* <p>{data}</p> */}
 
           <input className="btn btn-accent w-1/2" type="submit" />
-          <p>
-            Already Have an account ? <Link to="/login"> Please Log in</Link>
+          <p className="p-4 font-semibold">
+            Already Have an account ?
+            <Link to="/login" className="text-red-500">
+              Please Log in
+            </Link>
           </p>
           <div className="divider">OR</div>
           <button onClick={handleGoogleSignIn} className="btn btn-outline">

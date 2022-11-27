@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-neutral text-neutral-content">
+      <div className="divider"></div>
+      <footer className="footer p-10 bg-neutral text-neutral-content place-items-center">
         <div>
           <span className="footer-title">Services</span>
           <Link className="link link-hover">Help center</Link>
@@ -29,7 +30,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="divider"></div>
-      <p>© 2022, CarBari All Rights Reserved.</p>
+      <p className="pb-5">© 2022, CarBari All Rights Reserved.</p>
     </div>
   );
 };
