@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { json, useLoaderData } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "./Context/AuthUserContext";
 import { useForm } from "react-hook-form";
@@ -43,8 +43,16 @@ const CategoryDetails = () => {
               </label>
 
               <form
-                onSubmit={handleSubmit((data) =>
-                  setOrderData(JSON.stringify(data))
+                onSubmit={handleSubmit(
+                  (data) => setOrderData(JSON.stringify(data))
+
+                  // fetch("http://localhost:5000/orderpost",{
+                  //   method:"POST", headers:{
+                  //     "content-type:application/json"
+                  //   },body:json.stringify(orderData)
+                  // })
+                  // .then(res=>res.json())
+                  // .then(data=>console.log(data))
                 )}
               >
                 <input
