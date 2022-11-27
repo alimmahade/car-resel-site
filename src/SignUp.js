@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
-  const { createUser, signInWithGoogle } = useContext(AuthContext);
+  const { createUser, signInWithGoogle, updateUserProfile } =
+    useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -14,11 +15,13 @@ const SignUp = () => {
   } = useForm();
   const handleSignUp = (data) => {
     console.log(data);
+
     createUser(data.email, data.password)
       .then((result) => {
         toast.success("Welcome: Register sucess");
         const user = result.user;
-        console.log(user);
+        updateUserProfile({ displayName: data.name });
+        console.log(user.displayName);
       })
       .catch((err) => console.log(err));
   };

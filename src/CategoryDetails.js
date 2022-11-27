@@ -1,12 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "./Context/AuthUserContext";
+import { useForm } from "react-hook-form";
 
 const CategoryDetails = () => {
   const { user } = useContext(AuthContext);
   const { email, displayName, uid } = user;
   console.log(displayName);
+  const { register, handleSubmit } = useForm();
+  const [orderData, setOrderData] = useState("");
   const data = useLoaderData();
 
   return (
@@ -39,55 +42,72 @@ const CategoryDetails = () => {
                 Book Now
               </label>
 
-              {/* Put this part before </body> tag */}
-              <input
-                type="checkbox"
-                id="Booking-Modal"
-                className="modal-toggle"
-              />
-              <div className="modal modal-bottom sm:modal-middle">
-                <div className="modal-box">
-                  <input
-                    type="text"
-                    className="input input-bordered w-full"
-                    readOnly
-                    defaultValue={catagory.name}
-                  />
-                  <input
-                    type="text"
-                    className="input input-bordered w-full"
-                    readOnly
-                    defaultValue={catagory.price}
-                  />
-                  <input
-                    type="text"
-                    className="input input-bordered w-full"
-                    readOnly
-                    defaultValue={email}
-                  />
-                  <input
-                    type="text"
-                    className="input input-bordered w-full"
-                    readOnly
-                    defaultValue={displayName || uid}
-                  />
-                  <input
-                    type="text"
-                    className="input input-bordered w-full"
-                    placeholder="give phone number"
-                  />
-                  <input
-                    type="text"
-                    className="input input-bordered w-full"
-                    placeholder="Location"
-                  />
-                  <div className="modal-action">
-                    <label htmlFor="Booking-Modal" className="btn">
-                      Submit
-                    </label>
+              <form
+                onSubmit={handleSubmit((data) =>
+                  setOrderData(JSON.stringify(data))
+                )}
+              >
+                <input
+                  type="checkbox"
+                  id="Booking-Modal"
+                  className="modal-toggle"
+                />
+                <div className="modal modal-bottom sm:modal-middle">
+                  <div className="modal-box">
+                    <input
+                      {...register("name")}
+                      type="text"
+                      className="input input-bordered w-full"
+                      readOnly
+                      defaultValue={catagory.name}
+                    />
+                    <input
+                      {...register("price")}
+                      type="text"
+                      className="input input-bordered w-full"
+                      readOnly
+                      defaultValue={catagory.price}
+                    />
+                    <input
+                      {...register("email")}
+                      type="text"
+                      className="input input-bordered w-full"
+                      readOnly
+                      defaultValue={email}
+                    />
+                    <input
+                      {...register("displyName")}
+                      type="text"
+                      className="input input-bordered w-full"
+                      readOnly
+                      defaultValue={displayName || uid}
+                    />
+                    <input
+                      {...register("phone")}
+                      type="text"
+                      className="input input-bordered w-full"
+                      placeholder="your phone number"
+                    />
+                    <input
+                      {...register("location")}
+                      type="text"
+                      className="input input-bordered w-full"
+                      placeholder="Location"
+                    />
+                    {console.log(orderData)}
+                    <div className="modal-action">
+                      <label
+                        htmlFor="Booking-Modal"
+                        className="btn"
+                        type="submit"
+                      >
+                        ok
+                      </label>
+                      <button className="btn btn-outline">Conform Buy</button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

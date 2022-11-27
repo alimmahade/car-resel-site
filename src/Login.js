@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "./Context/AuthUserContext";
@@ -14,11 +14,13 @@ const Login = () => {
   const { login, signInWithGoogle } = useContext(AuthContext);
   console.log(login);
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   const handleLogin = (data) => {
     console.log(data);
     login(data.email, data.password)
       .then((result) => {
-        navigate("/home");
+        navigate(from, { replace: true });
         toast.success("Welcome: Log in sucess");
       })
       .catch((err) => console.log(err));
@@ -68,7 +70,7 @@ const Login = () => {
             </label>
           </div>
           <input className="btn btn-accent w-1/2" type="submit" />
-          <p>
+          <p className="p-4">
             New to our website ?{" "}
             <Link to="/signup" className="text-cyan-400">
               Create a Account
