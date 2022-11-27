@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const [cateBtn, setcateBtn] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/category")
+    fetch("https://as-12-server.vercel.app/category")
       .then((res) => res.json())
       .then((data) => setcateBtn(data));
   }, []);

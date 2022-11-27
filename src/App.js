@@ -37,7 +37,7 @@ function App() {
           ),
           loader: async ({ params }) => {
             const data = await fetch(
-              `http://localhost:5000/categorydetails/${params.id}`
+              `https://as-12-server.vercel.app/categorydetails/${params.id}`
             );
             return data;
           },

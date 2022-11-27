@@ -46,7 +46,7 @@ const CategoryDetails = () => {
                 onSubmit={handleSubmit(
                   (data) => setOrderData(JSON.stringify(data))
 
-                  // fetch("http://localhost:5000/orderpost",{
+                  // fetch("https://as-12-server.vercel.app/orderpost",{
                   //   method:"POST", headers:{
                   //     "content-type:application/json"
                   //   },body:json.stringify(orderData)
