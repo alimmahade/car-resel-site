@@ -1,15 +1,17 @@
-import React, { useContext, useState } from "react";
-import { json, useLoaderData } from "react-router-dom";
+import React, { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "./Context/AuthUserContext";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CategoryDetails = () => {
   const { user } = useContext(AuthContext);
   const { email, displayName, uid } = user;
   console.log(displayName);
   const { register, handleSubmit } = useForm();
-  const [orderData, setOrderData] = useState("");
+
   const data = useLoaderData();
 
   return (
@@ -43,17 +45,29 @@ const CategoryDetails = () => {
               </label>
 
               <form
-                onSubmit={handleSubmit(
-                  (data) => setOrderData(JSON.stringify(data))
-
-                  // fetch("https://as-12-server.vercel.app/orderpost",{
-                  //   method:"POST", headers:{
-                  //     "content-type:application/json"
-                  //   },body:json.stringify(orderData)
-                  // })
-                  // .then(res=>res.json())
-                  // .then(data=>console.log(data))
-                )}
+                onSubmit={handleSubmit((data) => {
+                  console.log(data);
+                  const carOrder = {
+                    email: user?.email,
+                    carName: data.name,
+                    carPrice: data.price,
+                    phone: data.phone,
+                    location: data.location,
+                  };
+                  fetch("https://as-12-server.vercel.app/orderpost", {
+                    method: "POST", // or 'PUT'
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(carOrder),
+                  })
+                    .then((res) => res.json())
+                    .then((data) => {
+                      if (data) {
+                        toast.success("Order Sucess!!!!!");
+                      }
+                    });
+                })}
               >
                 <input
                   type="checkbox"
@@ -102,7 +116,6 @@ const CategoryDetails = () => {
                       className="input input-bordered w-full"
                       placeholder="Location"
                     />
-                    {console.log(orderData)}
                     <div className="modal-action">
                       <label
                         htmlFor="Booking-Modal"
@@ -111,7 +124,7 @@ const CategoryDetails = () => {
                       >
                         ok
                       </label>
-                      <button className="btn btn-outline">Conform Buy</button>
+                      <button className="btn btn-outline">Confirm Buy</button>
                     </div>
                   </div>
                 </div>
