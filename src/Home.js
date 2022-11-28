@@ -5,17 +5,22 @@ import jic from "./asset/img/2.jpg";
 import jip from "./asset/img/4.png";
 import jik from "./asset/img/6.jfif";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [cateBtn, setcateBtn] = useState([]);
   useEffect(() => {
     fetch("https://as-12-server.vercel.app/category")
       .then((res) => res.json())
-      .then((data) => setcateBtn(data));
+      .then((data) => {
+        setcateBtn(data);
+        if (data) {
+          <button className="btn loading">loading</button>;
+          toast.success("Data Loading Sucess!!");
+        }
+      });
   }, []);
-
-  // const cateBtn = useLoaderData();
-  // console.log(cateBtn);
 
   return (
     <div>
