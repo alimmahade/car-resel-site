@@ -89,12 +89,6 @@ const Header = () => {
                 Items
               </Link>
             </li>
-
-            <li>
-              <Link to="/signup" className="btn btn-ghost p-4">
-                Register
-              </Link>
-            </li>
             <li>
               {" "}
               <Link to="/blog" className="btn btn-ghost p-4">
@@ -119,7 +113,9 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className="btn">Get started</Link>
+          <Link to="/" className="btn">
+            Get started
+          </Link>
         </div>
       </div>
     </div>
